@@ -44,3 +44,32 @@ public class java {
 
         }
 }
+
+/*
+7
+*
+**
+***
+****
+***
+**
+*
+
+      */
+
+      import java.util.Scanner;
+public class java {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int k = 0;
+        for (int i = 1; i <= n; i++) {
+            int i1 = i <= 4 ? k++ : k--;
+            for (int j = 1; j <= k; j++){
+                    System.out.print("*");
+                }
+            System.out.println();
+            }
+        
+            }
+        }
