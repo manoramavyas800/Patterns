@@ -1,0 +1,35 @@
+4
+   1
+  12A
+ 123AB
+1234ABC
+
+
+import java.util.Scanner;
+
+public class Kafi {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int q=n;
+        char c;
+       int k;
+       for(int i=1;i<=n;i++){
+           q--;
+           c='A';
+           k=1;
+           for(int j=1;j<=n+i-1;j++){
+               if(j<=q){
+                   System.out.print(" ");
+               }else{
+                   if(j<=n){
+                     System.out.print(k++);
+                   }else{
+                       System.out.print(c++);
+                   }
+               }
+           }
+           System.out.println();
+       }
+    }
+}
