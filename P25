@@ -1,0 +1,50 @@
+21
+          0          
+         121         
+        23432        
+       3456543       
+      456787654      
+     56789098765     
+    6789012109876    
+   789012343210987   
+  89012345654321098  
+ 9012345678765432109 
+012345678909876543210
+ 9012345678765432109 
+  89012345654321098  
+   789012343210987   
+    6789012109876    
+     56789098765     
+      456787654      
+       3456543       
+        23432        
+         121         
+          0   
+
+
+import java.util.Scanner;
+public class Test {
+
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int t = sc.nextInt();
+       int k=1;
+       int n=11;
+       int m=0;
+       for(int i=1;i<=t;i++){
+           int l=(i<=n)?m++:m--;
+           k=m-1;
+           for(int j=1; j<=t;j++){
+               if(j>=n+1-m&&j<=n-1+m){
+                   System.out.print(j<n?k++%10:k--%10);
+               }else{
+                   System.out.print(" ");
+               }
+           }
+           System.out.println();
+       }
+
+
+ }
+}
