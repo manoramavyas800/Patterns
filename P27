@@ -1,0 +1,34 @@
+5
+    1
+   212
+  32123
+ 4321234
+543212345
+
+import java.util.Scanner;
+
+public class LaunchAmazon {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int k=n;
+        int p;
+       for(int i=1;i<=n;i++){
+           k--;
+           p=i;
+           for(int j=1;j<=n+i-1;j++){
+               if(j<=k){
+                   System.out.print(" ");
+               }else{
+                  if(j<n){
+                      System.out.print(p--);
+                  }else{
+                      System.out.print(p++);
+                  }
+               }
+           }
+           System.out.println();
+       }
+       sc.close();
+    }
+}
